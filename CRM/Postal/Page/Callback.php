@@ -56,8 +56,7 @@ class CRM_Postal_Page_Callback extends CRM_Core_Page {
     catch (exception $e) {
         die($e->getMessage());
     }
-
-    watchdog('postal',$status.'-'.print_r($callback,true));
+    
     die('Bounce Processed for '.$from);
 
   }

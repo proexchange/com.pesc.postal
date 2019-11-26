@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/postal/callback</path>
+    <page_callback>CRM_Postal_Page_Callback</page_callback>
+    <title>Callback</title>
+    <access_callback>1</access_callback>
+    <is_public>true</is_public>
+  </item>
+</menu>

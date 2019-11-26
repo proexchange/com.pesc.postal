@@ -64,13 +64,13 @@ function postal_civicrm_enable() {
   _postal_civix_civicrm_enable();
 
 
-  // Add sparkpost suppression list 
+  // Add Postal suppression list 
   if(!CRM_Core_DAO::singleValueQuery("SELECT count(id) as 'COUNT' FROM civicrm_mailing_bounce_type WHERE `name` = 'Postal Supression'")) {
   CRM_Core_DAO::singleValueQuery("INSERT INTO `civicrm_mailing_bounce_type` (`name`, `description`, `hold_threshold`) VALUES ('Postal Supression', 'Postal supression list', 1)");
   $bounce_type_id = CRM_Core_DAO::singleValueQuery("SELECT `id` FROM `civicrm_mailing_bounce_type` WHERE `name` = 'Postal Supression' LIMIT 1");
   CRM_Core_DAO::singleValueQuery("INSERT INTO `civicrm_mailing_bounce_pattern` (`bounce_type_id`, `pattern`) VALUES ($bounce_type_id, 'is on the suppression list')");
   }
-  
+
 }
 
 /**

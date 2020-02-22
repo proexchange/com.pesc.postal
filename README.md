@@ -10,7 +10,7 @@ Prerequisites: You have a working installation of Postal with domain added and a
 1. Create SMTP credentials and setup CiviCRM's SMTP mailer.
 2. Add webhook in Postal to http(s)://example.com/civicrm/postal/callback
     
-Suggested Events Webhook Events
+Suggested Webhook Events
 - MessageDelayed
 - MessageDeliveryFailed
 - MessageHeld

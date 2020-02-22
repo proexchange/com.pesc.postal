@@ -9,5 +9,11 @@ Prerequisites: You have a working installation of Postal with domain added and a
 1. Install this extension and enable
 1. Create SMTP credentials and setup CiviCRM's SMTP mailer.
 2. Add webhook in Postal to http(s)://example.com/civicrm/postal/callback
+    
+Suggested Events Webhook Events
+    - MessageDelayed
+    - MessageDeliveryFailed
+    - MessageHeld
+    - MessageBounced
 
 Optional: Install [Transactional Mail](https://github.com/fuzionnz/nz.co.fuzion.transactional) extension to process bounces for transactional mail 

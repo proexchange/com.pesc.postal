@@ -11,9 +11,9 @@ Prerequisites: You have a working installation of Postal with domain added and a
 2. Add webhook in Postal to http(s)://example.com/civicrm/postal/callback
     
 Suggested Events Webhook Events
-    - MessageDelayed
-    - MessageDeliveryFailed
-    - MessageHeld
-    - MessageBounced
+- MessageDelayed
+- MessageDeliveryFailed
+- MessageHeld
+- MessageBounced
 
 Optional: Install [Transactional Mail](https://github.com/fuzionnz/nz.co.fuzion.transactional) extension to process bounces for transactional mail 

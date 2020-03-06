@@ -57,6 +57,12 @@ class CRM_Postal_Page_Callback extends CRM_Core_Page {
       die('Not a CiviMail email');
     }
 
+    //Check for previously processed bounces
+    $bounceCheck = CRM_Core_DAO::executeQuery("SELECT * FROM civicrm_mailing_event_bounce WHERE event_queue_id = $queID;");
+    if($bounceCheck->N) {
+      die('Bounce Previously Processed for '.$from);
+    }
+
     //attempt to process bounce with output from receiving mail server 
     try {
       $trackBounce = civicrm_api3('Mailing', 'event_bounce', [
